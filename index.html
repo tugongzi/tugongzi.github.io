@@ -13,8 +13,12 @@ title: Home
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
+    <div class="entry">
+      {{ post.excerpt }}
+    </div>
 
-    {{ post.content }}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">阅读全文</a>
+
   </div>
   {% endfor %}
 </div>
